@@ -7,18 +7,18 @@ import static org.junit.Assert.*;
 public class StringMatcherTest {
 
 
-    StringMatcher  obj;
+    StringMatcher  matcher;
 
     @Before
     public void setup(){
         System.out.println("Before");
-        obj = new StringMatcher();
+        matcher = new StringMatcher();
     }
 
     @After
     public void teardown(){
         System.out.println("After");
-        obj = null;
+        matcher = null;
     }
 
     @BeforeClass
@@ -39,7 +39,7 @@ public class StringMatcherTest {
         //Arrange
 
         //Act
-        String result =  obj.matching("She sells seashells by the seashore","se");
+        String result =  matcher.matching("She sells seashells by the seashore","se");
 
         String expected="Found at: 4 - 6\n" +
                 "Found at: 10 - 12\n" +
@@ -56,7 +56,7 @@ public class StringMatcherTest {
         //Arrange
 
         //Act
-        String result =  obj.matching(null,"se");
+        String result =  matcher.matching(null,"se");
 
         String expected = null;
 
@@ -70,7 +70,7 @@ public class StringMatcherTest {
         //Arrange
 
         //Act
-        String result =  obj.matching("She sells seashells",null);
+        String result =  matcher.matching("She sells seashells",null);
 
         String expected = null;
 
@@ -85,7 +85,7 @@ public class StringMatcherTest {
         //Arrange
 
         //Act
-        String result =  obj.matching("She sells seashells","dr");
+        String result =  matcher.matching("She sells seashells","dr");
 
         String expected = null;
 
@@ -97,7 +97,7 @@ public class StringMatcherTest {
     @Test
     public void matchingNotNull() {
 
-        String actual=obj.matching("She sells seashells by the seashore","se");
+        String actual = matcher.matching("She sells seashells by the seashore","se");
         assertNotNull(actual);
     }
 

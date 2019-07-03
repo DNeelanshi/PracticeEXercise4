@@ -25,7 +25,7 @@ public class ReplaceCharacters {
             }else{
                 finalresult = str;
             }
-           //check for occurence of i and
+            //check for occurence of i and
             if(str.contains("l")){
                 result = str.replaceAll("l","t");
 
@@ -36,11 +36,11 @@ public class ReplaceCharacters {
                 finalresult = str;
             }
 
-               if(finalresult.length() >1){
-                   return  finalresult;
-               }else {
-                   return null;
-               }
+            if(finalresult.length() >1){
+                return  finalresult;
+            }else {
+                return null;
+            }
 
         }catch (NullPointerException e){   //check for space values or nul values
 

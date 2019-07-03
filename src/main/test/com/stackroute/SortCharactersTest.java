@@ -8,18 +8,18 @@ import static org.junit.Assert.*;
 public class SortCharactersTest {
 
 
-    SortCharacters  obj;
+    SortCharacters  sortCharacters;
 
     @Before
     public void setup(){
         System.out.println("Before");
-        obj = new SortCharacters();
+        sortCharacters = new SortCharacters();
     }
 
     @After
     public void teardown(){
         System.out.println("After");
-        obj = null;
+        sortCharacters = null;
     }
 
     @BeforeClass
@@ -40,7 +40,7 @@ public class SortCharactersTest {
         //Arrange
 
         //Act
-        String[] result =  obj.sortWordsInParagraph("Apple is good");
+        String[] result =  sortCharacters.sortWordsInParagraph("Apple is good");
 
         String[] expected={"Apple","good","is"};
 
@@ -55,7 +55,7 @@ public class SortCharactersTest {
         //Arrange
 
         //Act
-        String[] result =  obj.sortWordsInParagraph("neelanshi676876823686 345");
+        String[] result =  sortCharacters.sortWordsInParagraph("neelanshi676876823686 345");
 
         String[] expected={"345","neelanshi676876823686"};
 
@@ -70,7 +70,7 @@ public class SortCharactersTest {
         //Arrange
 
         //Act
-        String[] result =  obj.sortWordsInParagraph(null);
+        String[] result =  sortCharacters.sortWordsInParagraph(null);
 
         String[] expected=null;
 
@@ -85,7 +85,7 @@ public class SortCharactersTest {
         //Arrange
 
         //Act
-        String[] result =  obj.sortWordsInParagraph(" ");
+        String[] result =  sortCharacters.sortWordsInParagraph(" ");
 
         String[] expected=null;
 

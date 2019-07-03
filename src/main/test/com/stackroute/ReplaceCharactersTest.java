@@ -7,29 +7,29 @@ import static org.junit.Assert.*;
 public class ReplaceCharactersTest {
 
 
-    ReplaceCharacters  obj;
+    ReplaceCharacters  replacechar;
 
     @Before
     public void setup(){
-        System.out.println("Before");
-        obj = new ReplaceCharacters();
+
+        replacechar = new ReplaceCharacters();
     }
 
     @After
     public void teardown(){
-        System.out.println("After");
-        obj = null;
+
+        replacechar = null;
     }
 
     @BeforeClass
     public static void setupBeforeClass(){
-        System.out.println("Beforelass");
+
 
     }
 
     @AfterClass
     public static void teardownAfterClass(){
-        System.out.println("AfterClass");
+
 
     }
 
@@ -39,7 +39,7 @@ public class ReplaceCharactersTest {
         //Arrange
 
         //Act
-        String result =  obj.replacechar("daily dry doing dull dance");
+        String result =  replacechar.replacechar("daily dry doing dull dance");
 
         String expected = "faity fry foing futt fance" ;
 
@@ -54,7 +54,7 @@ public class ReplaceCharactersTest {
         //Arrange
 
         //Act
-        String result =  obj.replacechar(null);
+        String result =  replacechar.replacechar(null);
 
         String expected = null ;
 
@@ -69,7 +69,7 @@ public class ReplaceCharactersTest {
         //Arrange
 
         //Act
-        String result =  obj.replacechar("App is great");
+        String result =  replacechar.replacechar("App is great");
 
         String expected = "App is great" ;
 
@@ -84,7 +84,7 @@ public class ReplaceCharactersTest {
         //Arrange
 
         //Act
-        String result =  obj.replacechar(null);
+        String result =  replacechar.replacechar(null);
 
         String expected = null ;
 
@@ -99,7 +99,7 @@ public class ReplaceCharactersTest {
         //Arrange
 
         //Act
-        String result =  obj.replacechar("32232");
+        String result =  replacechar.replacechar("32232");
 
         String expected = "32232" ;
 

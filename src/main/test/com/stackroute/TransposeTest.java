@@ -7,18 +7,18 @@ import static org.junit.Assert.*;
 public class TransposeTest {
 
 
-    Transpose  obj;
+    Transpose  transpose;
 
     @Before
     public void setup(){
         System.out.println("Before");
-        obj = new Transpose();
+        transpose = new Transpose();
     }
 
     @After
     public void teardown(){
         System.out.println("After");
-        obj = null;
+        transpose = null;
     }
 
     @BeforeClass
@@ -39,7 +39,7 @@ public class TransposeTest {
         //Arrange
 
         //Act
-        String result =  obj.transpose("a quick brown fox jumps over the lazy dog");
+        String result =  transpose.transpose("a quick brown fox jumps over the lazy dog");
 
         String expected = "a kciuq nworb xof spmuj revo eht yzal god" ;
 
@@ -54,7 +54,7 @@ public class TransposeTest {
         //Arrange
 
         //Act
-        String result =  obj.transpose(null);
+        String result =  transpose.transpose(null);
 
         String expected = null ;
 
@@ -69,7 +69,7 @@ public class TransposeTest {
         //Arrange
 
         //Act
-        String result =  obj.transpose("123 456");
+        String result =  transpose.transpose("123 456");
 
         String expected = "321 654" ;
 
@@ -81,7 +81,7 @@ public class TransposeTest {
     @Test
     public void transposeNotNull() {
 
-        String actual=obj.transpose("a quick brown fox jumps over the lazy dog");
+        String actual = transpose.transpose("a quick brown fox jumps over the lazy dog");
         assertNotNull(actual);
     }
 }

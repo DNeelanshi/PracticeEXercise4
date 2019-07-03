@@ -6,29 +6,29 @@ import static org.junit.Assert.*;
 
 public class CountTotalOccurencesTest {
 
-    CountTotalOccurences  obj;
+    CountTotalOccurences  countoccurences;
 
     @Before
     public void setup(){
-        System.out.println("Before");
-        obj = new CountTotalOccurences();
+
+        countoccurences = new CountTotalOccurences();
     }
 
     @After
     public void teardown(){
-        System.out.println("After");
-        obj = null;
+
+        countoccurences = null;
     }
 
     @BeforeClass
     public static void setupBeforeClass(){
-        System.out.println("Beforelass");
+
 
     }
 
     @AfterClass
     public static void teardownAfterClass(){
-        System.out.println("AfterClass");
+
 
     }
 
@@ -38,7 +38,7 @@ public class CountTotalOccurencesTest {
         //Arrange
 
         //Act
-        int result =  obj.countoccurences("My name is Neelanshi and not available now",'n');
+        int result =  countoccurences.countoccurences("My name is Neelanshi and not available now",'n');
 
         int expected = 5;
 
@@ -53,7 +53,7 @@ public class CountTotalOccurencesTest {
         //Arrange
 
         //Act
-        int result =  obj.countoccurences(null,'n');
+        int result =  countoccurences.countoccurences(null,'n');
 
         int expected = 0;
 
@@ -68,7 +68,7 @@ public class CountTotalOccurencesTest {
         //Arrange
 
         //Act
-        int result =  obj.countoccurences("1",'1');
+        int result =  countoccurences.countoccurences("1",'1');
 
         int expected = 1;
 
@@ -82,7 +82,7 @@ public class CountTotalOccurencesTest {
         //Arrange
 
         //Act
-        int result =  obj.countoccurences("My name is neelanshi",'1');
+        int result =  countoccurences.countoccurences("My name is neelanshi",'1');
 
         int expected = 0;
 
@@ -96,7 +96,7 @@ public class CountTotalOccurencesTest {
         //Arrange
 
         //Act
-        int result =  obj.countoccurences("My name is1 neel11ans11hi",'1');
+        int result =  countoccurences.countoccurences("My name is1 neel11ans11hi",'1');
 
         int expected = 5;
 

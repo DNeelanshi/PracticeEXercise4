@@ -7,29 +7,29 @@ import static org.junit.Assert.*;
 public class NameMatchRegexTest {
 
 
-    NameMatchRegex  obj;
+    NameMatchRegex  matchRegex;
 
     @Before
     public void setup(){
-        System.out.println("Before");
-        obj = new NameMatchRegex();
+
+        matchRegex = new NameMatchRegex();
     }
 
     @After
     public void teardown(){
-        System.out.println("After");
-        obj = null;
+
+        matchRegex = null;
     }
 
     @BeforeClass
     public static void setupBeforeClass(){
-        System.out.println("Beforelass");
+
 
     }
 
     @AfterClass
     public static void teardownAfterClass(){
-        System.out.println("AfterClass");
+
 
     }
 
@@ -39,7 +39,7 @@ public class NameMatchRegexTest {
         //Arrange
 
         //Act
-        boolean result =  obj.namematching("His name is harry");
+        boolean result =  matchRegex.namematching("His name is harry");
 
         boolean expected = true ;
 
@@ -53,7 +53,7 @@ public class NameMatchRegexTest {
         //Arrange
 
         //Act
-        boolean result =  obj.namematching("His name is Henry");
+        boolean result =  matchRegex.namematching("His name is Henry");
 
         boolean expected = false ;
 
@@ -67,7 +67,7 @@ public class NameMatchRegexTest {
         //Arrange
 
         //Act
-        boolean result =  obj.namematching("23872 23872979");
+        boolean result =  matchRegex.namematching("23872 23872979");
 
         boolean expected = false ;
 
@@ -81,7 +81,7 @@ public class NameMatchRegexTest {
         //Arrange
 
         //Act
-        boolean result =  obj.namematching(null);
+        boolean result =  matchRegex.namematching(null);
 
         boolean expected = false ;
 
